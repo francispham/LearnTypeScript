@@ -69,3 +69,29 @@ nullType = null;  // null is included in String Type
 // console.log('nullType:', nullType);
 nullType = 'NullII';
 nullType = undefined; // undefined is Invalid but No Error Showed
+
+
+/* ******************** */
+/* 2. INTERFACES */ 
+interface Person {
+  name: string;
+  age?: number; // ? is defining Optional Param
+}
+const interfaceFunctionI = ({ name, age }: Person): string => {
+  console.log(name);
+  return name;
+};
+// This works TOO!
+const interfaceFunctionII = ({ name, age }: Person) => {
+  console.log(name);
+  return name;
+};
+
+// interfaceFunctionII({
+//   name: 'Francis', 
+//   age: 32
+// });
+// interfaceFunctionII({
+//   age: 32,
+//   name: 'Phong'
+// });

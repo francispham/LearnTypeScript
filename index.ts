@@ -95,3 +95,25 @@ const interfaceFunctionII = ({ name, age }: Person) => {
 //   age: 32,
 //   name: 'Phong'
 // });
+
+
+/* ******************** */
+/* 3. ENUMS (For a Set Numbers of Option) */
+enum NumericType {
+  Videos,     // 0
+  BlogPost,   // 1
+  Quiz        // 2
+}
+
+enum StringType {
+  Video = 'VIDEO',
+  BlogPost = 'BLOG_POST',
+  Quiz = 'QUIZ'
+}
+
+const createContent = (contentType: StringType) => {
+  console.log(NumericType.Quiz);
+};
+// createContent('QUIZ');  // invalid
+// createContent(StringType.Video);
+// console.log(NumericType); 

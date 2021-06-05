@@ -117,3 +117,36 @@ const createContent = (contentType: StringType) => {
 // createContent('QUIZ');  // invalid
 // createContent(StringType.Video);
 // console.log(NumericType); 
+
+
+/* ******************** */
+/* 4. CLASSES */
+class ClassType {
+  publicVar: string;  // or:    public publicVar: string;
+  private privateVar: string; // prevents outside usage
+  readonly readonlyVar: string; // prevents from being changed
+  
+  constructor(publicVar, privateVar, readonlyVar) {
+    this.publicVar = publicVar;
+    this.privateVar = privateVar;
+    this.readonlyVar = readonlyVar;
+  }
+
+  type(): string {
+    console.log('Private: ', this.privateVar);
+    
+    this.publicVar = 'Changed Public Variable'
+    console.log('Public: ', this.publicVar);
+    
+    // this.readonlyVar = 'Changing'; // invalid because of readonly keyword!
+
+    console.log('This is Class Type');
+    return 'Have to be String Type here';
+  }
+};
+
+const newClass = new ClassType('Public Variable', 'Private Variable', 'Read Only Variable');
+// newClass.type();
+// console.log(newClass.publicVar);
+// console.log(newClass.privateVar); // invalid because of private keyword!
+// console.log(newClass.readonlyVar);

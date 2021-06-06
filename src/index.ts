@@ -150,3 +150,15 @@ const newClass = new ClassType('Public Variable', 'Private Variable', 'Read Only
 // console.log(newClass.publicVar);
 // console.log(newClass.privateVar); // invalid because of private keyword!
 // console.log(newClass.readonlyVar);
+
+
+/* ******************** */
+/* 5. MODULES */
+import defaultEnum, { InterfaceModule } from './modules';
+
+const interfaceModuleFunction = ({isModule}: InterfaceModule) => {
+  console.log(isModule);
+};
+
+// interfaceModuleFunction({isModule: true});
+// console.log(defaultEnum.Type);

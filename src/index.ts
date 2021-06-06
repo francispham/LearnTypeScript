@@ -162,3 +162,15 @@ const interfaceModuleFunction = ({isModule}: InterfaceModule) => {
 
 // interfaceModuleFunction({isModule: true});
 // console.log(defaultEnum.Type);
+
+
+/* ******************** */
+/* 6. GENERICS */
+const genericFunction = <G>(arg: G): G => {
+  return arg;
+};
+const genericOutput = genericFunction('Generic');
+// console.log('genericOutput:', genericOutput);
+// genericFunction(3);
+
+// https://www.leveluptutorials.com/tutorials/level-1-typescript/generics

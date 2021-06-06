@@ -174,3 +174,20 @@ const genericOutput = genericFunction('Generic');
 // genericFunction(3);
 
 // https://www.leveluptutorials.com/tutorials/level-1-typescript/generics
+
+
+/* ******************** */
+/* 7. DUCK TYPING */
+class DuckTyping implements InterfaceModule {
+  isModule: boolean;
+};
+
+let newDuckTyping: InterfaceModule = new DuckTyping();
+
+const fake = {
+  isModule: false,
+  name: 'Francis'
+};
+
+newDuckTyping = fake;
+// console.log('newDuckTyping:', newDuckTyping);
